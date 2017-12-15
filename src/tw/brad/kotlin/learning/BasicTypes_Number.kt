@@ -17,6 +17,8 @@ fun main(args: Array<String>){
     val n6 = 327688     // 沒有指定資料型態的時候, 預設為 Int
     val n7 = n1         // 如果初始化給值的資料型態, 決定其資料型態
     val n8 = 127        // 任何整數數值為 Int 的資料型態
+    val n88 = 123L      // 資料型態為 Long
+    println("n88 => " + n88.javaClass.kotlin.qualifiedName)
 
     var n9 = n1 + n5    // 不同資料型的資料內容可以進行數學運算
 
@@ -35,6 +37,19 @@ fun main(args: Array<String>){
     println("n12 => " + n12.javaClass.kotlin.qualifiedName)
     val n13: Float = 1.2F
     println("n13 => " + n13.javaClass.kotlin.qualifiedName)
+
+    //val n14 = 010 ==> 不支援開頭為 0 的表示法
+    val n14 = 0x100
+    val n15 = 0b101
+    println("n14 = " + n14)
+    println("n15 = " + n15)
+
+    var n16 = 123       // 相當於 var n16 : Int = 123
+    //n16 = null        // 是一種不可以是 non-null 的資料型態, 就不會是 null
+    
+    var n17: Int? = 123 // 宣告了一個可以是 null 的資料型態, 就是在資料型態後面加上?
+    n17 = null          // 就可以為 null
+
 
 
 }
